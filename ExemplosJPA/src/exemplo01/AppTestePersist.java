@@ -20,11 +20,13 @@ public class AppTestePersist {
 		
 		Livro01 l1 = new Livro01();
 		l1.setAutor("Maria");
-		l1.setCodigo(3);
+		l1.setCodigo(7);
 		l1.setValor(444);
 		l1.setTitulo("AAAAAAAAAAA");
-			
+		
+		
 		em.persist(l1);
+		
 		
 		em.getTransaction().begin();
 		em.getTransaction().commit();

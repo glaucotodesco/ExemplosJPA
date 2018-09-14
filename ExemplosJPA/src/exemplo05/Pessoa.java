@@ -19,8 +19,8 @@ import javax.persistence.*;
  * */
 
 @Entity
-@Inheritance(strategy=InheritanceType.TABLE_PER_CLASS)
-//@DiscriminatorColumn(name="nomeDaColunaDescritiva", discriminatorType=DiscriminatorType.STRING,length=20)
+@Inheritance(strategy=InheritanceType.JOINED)
+@DiscriminatorColumn(name="nomeDaColunaDescritiva", discriminatorType=DiscriminatorType.STRING,length=20)
 public class Pessoa implements Serializable {
 
 	private static final long serialVersionUID = 1L;

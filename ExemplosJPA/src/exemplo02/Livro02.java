@@ -17,9 +17,10 @@ import javax.persistence.*;
 
 @NamedQueries 
 ({
-	@NamedQuery(name="Livro02.findAll",           query=" Select l From Livro02 l"),
-	@NamedQuery(name="Livro02.findValorAbaixo",   query=" Select l From Livro02 l Where l.valor < :valor"),
- 
+	@NamedQuery(name="Livro02.findAll", 
+			query=" Select l From Livro02 l"),
+	@NamedQuery(name="Livro02.findValorAbaixo",
+	query=" Select l From Livro02 l Where l.valor < :valor"),
 })
 public class Livro02 implements Serializable {
 
@@ -42,7 +43,7 @@ public class Livro02 implements Serializable {
 	@Lob
 	private byte[] capa;
 	
-	@Temporal(TemporalType.TIMESTAMP)
+	@Temporal(TemporalType.DATE)
 	private Calendar anoPuplicacao;
 	
 	

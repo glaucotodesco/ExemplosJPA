@@ -21,10 +21,7 @@ public class Produto implements Serializable {
 
 	
 	@ManyToOne
-	//@JoinColumn(name="idFornecedor")
-	@JoinTable(name="TBL_FORN_PRODUTO",
-			inverseJoinColumns=@JoinColumn(name="fornecedor_id"),
-					joinColumns=@JoinColumn(name="produto_id"))
+	@JoinColumn(name="id_Fornecedor")
 	private Fornecedor fornecedor;
 	
 	

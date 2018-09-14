@@ -11,21 +11,17 @@ import javax.persistence.*;
  * Entity implementation class for Entity: Fornecedor
  * @JoinTable(name="TBL_FORN_PRODUTO",joinColumns=@JoinColumn(name="fornecedor_id"), 
 	inverseJoinColumns=@JoinColumn(name="produto_id"))
+	
+   @OneToMany(cascade=CascadeType.ALL, mappedBy= "fornecedor")
  */
 @Entity
-
 public class Fornecedor implements Serializable {
 	@Id
 	private int id;
 	private String nome;
 	
-	
-	//@OneToMany(cascade=CascadeType.ALL, mappedBy= "fornecedor")
-	@OneToMany
-	@JoinTable(name="TBL_FORN_PRODUTO",
-	joinColumns=@JoinColumn(name="fornecedor_id"),
-	inverseJoinColumns=@JoinColumn(name="produto_id"))
-	
+		
+	@OneToMany(mappedBy="fornecedor")
 	private Collection <Produto> produtos = new ArrayList <Produto>();
 	
 	

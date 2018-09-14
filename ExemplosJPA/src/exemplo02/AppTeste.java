@@ -18,8 +18,7 @@ public class AppTeste {
 		
 		Livro02 l1 = new Livro02();
 		
-		byte b=1;
-		l1.setCodigo(b);
+	
 		l1.setAutor("asdasd");
 		l1.setValor(5);
 		l1.setTitulo("Jasdawwww2ava4");

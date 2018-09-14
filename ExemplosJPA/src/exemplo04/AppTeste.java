@@ -50,7 +50,8 @@ public class AppTeste {
 	    
 		//Consulta (mais flexivel)	
 		//Acrescente a consulta na classe Livro02
-		Query q = em.createQuery("Select l From Livro02 l");
+		Query q = em.createQuery(
+				"Select l From Livro02 l");
 		List <Livro02> list = q.getResultList();
 			
 		for(Livro02 l: list)
@@ -59,13 +60,26 @@ public class AppTeste {
 		}
 			
 	    //Consulta pré-construida (mais eficiente)
-		list = em.createNamedQuery("Livro02.findAll").getResultList();
+		list = em.createNamedQuery(
+				"Livro02.findAll").getResultList();
+		
+		
 		for(Livro02 l: list)
 		{
 		      System.out.println(l);	
 		}
 		
-		
+		//Consulta pré-construida (mais eficiente)
+		list = em.createNamedQuery(
+				"Livro02.findValorAbaixo").
+				getResultList();
+				
+				em.setProperty("valor", 40);
+				
+				for(Livro02 l: list)
+				{
+				      System.out.println(l);	
+				}
 		
 		
 		
@@ -81,3 +95,4 @@ public class AppTeste {
 	}
 
 }
+

@@ -21,16 +21,22 @@
 		<class>exemplo10.Address</class>
 		<class>exemplo11.Material</class>
 		<class>exemplo01.Livro01</class>
+		<class>pergunta1.CCantor</class>
+		<class>pergunta1.CCompositor</class>
+		<class>pergunta1.CCompositorInstrumental</class>
+		<class>pergunta1.CGravacao</class>
+		<class>pergunta1.CMusica</class>
 				
 		<properties>
 			<!-- property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/-->
 			<property name="javax.persistence.jdbc.url" value="jdbc:derby://localhost:1527/exemplosjpa;create=true"/>
 			<property name="javax.persistence.jdbc.user" value="app"/>
+			<property name="javax.persistence.jdbc.password" value="app"/>
 			<property name="javax.persistence.jdbc.driver" value="org.apache.derby.jdbc.ClientDriver"/>
 			
 			<property name="eclipselink.logging.level" value="OFF"/>
 			
-			<property name="javax.persistence.jdbc.password" value="app"/>
+			
 			<property name="eclipselink.ddl-generation" value="create-tables"/>
 			<property name="eclipselink.logging.level.sql" value="ALL"/>
 			<property name="eclipselink.logging.level.query" value="ALL"/>

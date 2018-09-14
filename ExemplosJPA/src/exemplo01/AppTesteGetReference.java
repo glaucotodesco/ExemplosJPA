@@ -21,7 +21,7 @@ public class AppTesteGetReference {
 		
 		try
 		{
-					l3 = em.getReference(Livro01.class, 2l);
+					l3 = em.getReference(Livro01.class, 4l);
 					System.out.println(l3.toString());
 		}
 		catch(EntityNotFoundException e)

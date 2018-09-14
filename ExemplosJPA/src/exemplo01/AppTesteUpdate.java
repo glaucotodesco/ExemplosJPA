@@ -12,13 +12,13 @@ public class AppTesteUpdate {
 		EntityManagerFactory factory = Persistence.createEntityManagerFactory("PU_Exemplos");
 		EntityManager em = factory.createEntityManager();
 
-		Livro01 l1 = em.find(Livro01.class, 3l);
+		Livro01 l1 = em.find(Livro01.class, 7l);
 
 		if (l1 != null) {
 			l1.setAutor("XXXXXXXXXXXXXXXX");
 			System.out.println("Sucesso");
 
-			l1 = em.find(Livro01.class, 2l);
+			l1 = em.find(Livro01.class, 7l);
 			System.out.println(l1);
 		} else {
 			System.out.println("Não cadastrado");

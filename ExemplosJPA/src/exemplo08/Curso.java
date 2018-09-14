@@ -20,15 +20,13 @@ public class Curso implements Serializable{
 	private int idCurso;
 	private String nome;
 	
-	@ManyToMany(cascade=CascadeType.ALL,mappedBy="cursos")
-	/*@JoinTable(
+	@ManyToMany(cascade=CascadeType.ALL)
+	@JoinTable(
 	    		name="TblCursoAluno",
 	    		joinColumns              = @JoinColumn(name ="c_idCurso"),
 	    		inverseJoinColumns       = @JoinColumn(name ="c_matricula") 
 	  	)
-	 */
-	
-    private Collection <Aluno> alunos = new ArrayList<>();
+	private Collection <Aluno> alunos = new ArrayList<>();
 	
 	
 	public Curso() {

@@ -11,7 +11,7 @@ import exemplo05.Pessoa;
  *
  */
 @Entity
-@DiscriminatorValue(value="FuncXXXXXXXX")
+@DiscriminatorValue(value="Func")
 public class Funcionario extends Pessoa implements Serializable {
 
 	

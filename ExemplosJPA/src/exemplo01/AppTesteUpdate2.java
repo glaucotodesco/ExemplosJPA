@@ -5,30 +5,28 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
 
-public class AppTesteRemove {
+public class AppTesteUpdate2 {
 
 	public static void main(String[] args) {
 
 		EntityManagerFactory factory = Persistence.createEntityManagerFactory("PU_Exemplos");
 		EntityManager em = factory.createEntityManager();
 
-		//Livro01 l1 = em.find(Livro01.class, 4l);
-		
-		//Entidade nao gerenciada (Erro)
 		Livro01 l1 = new Livro01();
-		l1.setCodigo(88l);
+		l1.setCodigo(7);
+		l1.setAutor("BlaBlaBla");
+		l1.setValor(10);
+		l1.setTitulo("QQQQ");
 
-		if (l1 != null) {
-			em.remove(l1);
-			System.out.println("Sucesso");
-		} else {
-			System.out.println("Não cadastrado");
-		}
-
+		//Save or Update
+		l1 = em.merge(l1);
+		
+		em.remove(l1);
+		
 		em.getTransaction().begin();
 		em.getTransaction().commit();
 
-		System.out.println("Fim");
+		System.out.println("Sucesso");
 
 		em.close();
 		factory.close();

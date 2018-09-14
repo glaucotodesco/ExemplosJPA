@@ -14,7 +14,7 @@ public class AppTesteFind {
 		EntityManagerFactory factory = Persistence.createEntityManagerFactory("PU_Exemplos");
 		EntityManager        em      = factory.createEntityManager();
 		
-		Livro01 l2 = em.find(Livro01.class, 4l);
+		Livro01 l2 = em.find(Livro01.class, 10l);
 		if(l2!= null)
 		     System.out.println(l2.toString());
 		else

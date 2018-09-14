@@ -24,8 +24,9 @@ public class Classe implements Serializable {
 	
 	
 	//@Enumerated(EnumType.ORDINAL)
+	
+	//@Enumerated(EnumType.ORDINAL)
 	//@Convert(converter=PeriodoConverter.class)
-	//@Enumerated(EnumType.STRING)
 	private Periodo periodo = Periodo.VESPERTINO;
 	
 	private static final long serialVersionUID = 1L;

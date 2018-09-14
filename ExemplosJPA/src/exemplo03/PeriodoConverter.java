@@ -4,8 +4,8 @@ import javax.persistence.AttributeConverter;
 import javax.persistence.Converter;
 
 //Conversão automática do tipo pelo JPA, não é necessário usar @Convert nas entidades.
-@Converter(autoApply=true)						 
-//@Converter ////Será necessário usar nas entidades	
+//@Converter(autoApply=true)						 
+@Converter ////Será necessário usar nas entidades	
 public class PeriodoConverter implements AttributeConverter<Periodo, String> {
 
 	@Override
